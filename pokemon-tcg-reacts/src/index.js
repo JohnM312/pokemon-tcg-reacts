@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';  
 import Home from './pages/Home.jsx';
 import Rules from './pages/Rules.jsx';
 import SampleDecks from './pages/SampleDecks.jsx';
@@ -11,16 +11,16 @@ import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/rules" element={<Rules />} />
-            <Route path="/sampledecks" element={<SampleDecks />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/carddetails" element={<CardDetails />} />
-          </Routes>
-        <Footer />
-    </Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL || '/'}> 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rules" element={<Rules />} />
+        <Route path="/sampledecks" element={<SampleDecks />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/carddetails/:cardId" element={<CardDetails />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
