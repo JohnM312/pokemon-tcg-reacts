@@ -1,11 +1,47 @@
+/* Suggestions for global.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2 {
-    text-align: center;
-    color: #ff0000;
-  }
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Added default text color */
+}
+
+/* Optional: Add a container if your App.js doesn't handle it */
+/* .main-content-area {
+max-width: 1100px; /* Adjust as needed */
+/*  margin: 20px auto; /* Center content area with space from header */
+/*  padding: 0 15px; /* Padding inside the content area */
+/* } */
+
+h1, h2, h3 { /* Ensure h3 is also included */
+  text-align: center;
+  color: #ff0000; /* Your red color */
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+p, li {
+  line-height: 1.6; /* Improve readability */
+  text-align: left; /* Default text alignment */
+}
+
+ul {
+padding-left: 20px; /* Adjust default list indentation if needed */
+list-style-position: inside; /* Or outside, based on preference */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevents extra space below images often */
+}
+
+/* Define the common red border style for sections */
+.bordered-section {
+  border: 2px solid red;
+  padding: 20px;
+  margin-bottom: 25px; /* Space between bordered sections */
+  background-color: #f8f8f8; /* Light background for contrast inside border */
+  /* border-radius: 5px; /* Optional: Slightly rounded corners */
+}

@@ -1,12 +1,37 @@
 .card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    width: 200px; /* Adjust as needed */
-    text-align: center;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
+  border: 2px solid red; 
+  padding: 15px;
+  margin: 10px;
+  width: 220px; /* Adjust width as needed */
+  text-align: center;
+  background-color: #fff; /* White background inside card */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Optional subtle shadow */
+  transition: transform 0.2s ease; /* Optional hover effect */
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.card img {
+  max-width: 90%; /* Slightly smaller than padding */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 { /* Style card title */
+  margin: 10px 0 5px 0; /* Adjust spacing */
+  font-size: 1.1em;
+  color: #333; /* Override global red for card titles if needed */
+  text-align: center;
+}
+
+.card p { /* Style card description */
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 0; /* Remove bottom margin if not needed */
+}

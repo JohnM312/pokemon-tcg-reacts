@@ -1,6 +1,102 @@
-.header {
-    background-color: red;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* header.css */
+header {
+  background-color: #ff0000; /* Red background */
+  padding: 5px 25px; /* Adjust padding */
+  display: flex;
+  justify-content: space-between; /* Logo left, Nav right */
+  align-items: center;
+  position: relative; /* Needed for absolute positioning of menu if required */
+}
+
+.logo { /* Class for the img tag in Header.jsx */
+  height: 50px; /* Adjust logo size */
+  width: auto;
+}
+
+.nav-links { /* Class for the ul tag */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px; /* Space between nav items */
+}
+
+.nav-links li a { /* Target the Link component */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active { /* Add .active class via NavLink if using it, else just hover */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger Menu Styles */
+.menu-checkbox {
+  display: none; /* Hide the actual checkbox */
+}
+
+.hamburger {
+  display: none; /* Hide hamburger by default on larger screens */
+  cursor: pointer;
+  padding: 10px;
+  /* Style the hamburger icon */
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media Query for Mobile Nav */
+@media (max-width: 768px) { /* Breakpoint where nav collapses */
+  .nav-links {
+      display: none; /* Hide nav links */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px; /* Position below header (adjust based on header height) */
+      left: 0;
+      background-color: #ff0000; /* Same red background */
+      padding: 10px 0;
+      z-index: 10; /* Ensure it's above other content */
   }
+
+  .menu-checkbox:checked ~ nav .nav-links {
+      display: flex; /* Show nav links when checkbox is checked */
+      align-items: center;
+  }
+
+  .nav-links li {
+       width: 100%;
+       text-align: center;
+  }
+   .nav-links li a {
+       padding: 15px 0; /* Adjust padding for vertical layout */
+   }
+
+  .hamburger {
+      display: block; /* Show hamburger on small screens */
+  }
+
+  /* Optional: Animate hamburger bars */
+   .menu-checkbox:checked ~ .hamburger .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+   }
+   .menu-checkbox:checked ~ .hamburger .bar:nth-child(2) {
+      opacity: 0;
+   }
+   .menu-checkbox:checked ~ .hamburger .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+   }
+}

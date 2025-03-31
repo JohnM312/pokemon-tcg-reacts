@@ -1,24 +1,91 @@
 .rules {
-    padding: 20px;
-  }
-  
-  .game-setup, .turn-structure, .winning-the-game {
-    margin-bottom: 20px;
-  }
-  
-  .turn-structure {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .phase {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .game-setup img {
-    max-width: 50%;
-    height: auto;
-  }
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Game Setup Section */
+.game-setup h2,
+.turn-structure-section h2,
+.winning-the-game h2 {
+  margin-top: 0; /* Remove top margin for headings inside bordered sections */
+}
+
+.game-setup-content {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 30px; /* Space between list and image */
+}
+
+.game-setup ul {
+  flex: 1; /* Allow list to take available space */
+  margin: 0; /* Remove default ul margin */
+  padding-left: 20px;
+}
+
+.game-setup img {
+  max-width: 45%; /* Control image size */
+  height: auto;
+  border: 1px solid #ddd; /* Optional subtle border for diagram */
+}
+
+/* Turn Structure Section */
+.turn-structure-section {
+    margin-bottom: 25px; /* Space below this whole section */
+}
+
+.turn-phases-container { /* The container for the 3 phases */
+  display: flex;
+  justify-content: space-between; /* Space out the phase boxes */
+  gap: 20px; /* Space between phase boxes */
+}
+
+.phase { /* Styling for each phase box */
+  width: calc(33.333% - 14px); /* Adjust width considering gap */
+  /* .bordered-section adds border and padding */
+  text-align: center; /* Center phase titles */
+}
+
+.phase h3 {
+  margin-top: 0;
+  color: #333; /* Maybe darker color for phase titles */
+}
+
+.phase ul {
+  text-align: left;
+  margin: 10px 0 0 0;
+  padding-left: 15px; /* Adjust list padding inside phases */
+  font-size: 0.95em;
+  list-style-position: outside;
+}
+.phase li {
+  margin-bottom: 5px;
+}
+
+
+/* Winning the Game Section */
+.winning-the-game ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .game-setup-content {
+        flex-direction: column; /* Stack list and image */
+        align-items: flex-start; /* Align items to the start */
+    }
+    .game-setup img {
+        max-width: 70%; /* Allow image to be larger when stacked */
+        margin-top: 15px;
+        align-self: center; /* Center image */
+    }
+    .turn-phases-container {
+        flex-direction: column; /* Stack phase boxes */
+        gap: 25px;
+    }
+    .phase {
+        width: 100%; /* Make phase boxes full width */
+        box-sizing: border-box;
+    }
+}

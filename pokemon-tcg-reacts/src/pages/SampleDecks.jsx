@@ -1,3 +1,4 @@
+// Updated SampleDecks.jsx
 import React from 'react';
 import '../styles/SampleDecks.css';
 
@@ -7,7 +8,7 @@ function SampleDecks() {
       <h1>Sample Decks</h1>
 
       <div className="deck-container">
-        <div className="deck">
+        <div className="deck bordered-section">
           <h2>Fire Blast Deck</h2>
           <img src="/images/Fire Blast Deck.png" alt="Fire Blast Deck" />
           <p>A strong "*Fire-type*" deck featuring Charizard for high-damage attacks.</p>
@@ -17,7 +18,7 @@ function SampleDecks() {
           </ul>
         </div>
 
-        <div className="deck">
+        <div className="deck bordered-section">
           <h2>Water Surge Deck</h2>
           <img src="/images/Water Surge Deck.png" alt="Water Surge Deck" />
           <p>A "*Water-type*" deck built around Blastoise's powerful Hydro Pump.</p>
@@ -27,7 +28,7 @@ function SampleDecks() {
           </ul>
         </div>
 
-        <div className="deck">
+        <div className="deck bordered-section">
           <h2>Electric Speed Deck</h2>
           <img src="/images/Pikachu V.jpg" alt="Electric Speed Deck" />
           <p>An "*Electric-type*" deck featuring Pikachu and Raichu for quick attacks.</p>

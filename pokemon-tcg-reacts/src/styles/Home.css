@@ -1,20 +1,91 @@
 .home {
   padding: 20px;
+  max-width: 1100px; /* Constrain width */
+  margin: 0 auto; /* Center the content */
 }
 
-.sections {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.section {
-  width: 45%;
+.home .intro-paragraph {
   text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
 }
 
-.section img {
-  max-width: 100%;
+/* Styles for the row with two sections */
+.home-sections-row {
+  display: flex;
+  justify-content: space-between; /* Puts space between the two sections */
+  gap: 20px; /* Adds space between sections */
+  margin-bottom: 25px; /* Space below the row */
+}
+
+.home-section { /* Styles for the two side-by-side sections */
+  width: calc(50% - 10px); /* Takes up half the width minus half the gap */
+  /* The .bordered-section class from global.css adds border and padding */
+  text-align: center; /* Center text within these sections */
+}
+
+.home-section h2 {
+  margin-top: 0; /* Remove top margin for headings inside bordered sections */
+}
+
+.home-section p,
+.home-section-full p {
+  text-align: left; /* Keep paragraph text left-aligned */
+}
+.home-section-full ul {
+  text-align: left;
+  padding-left: 20px; /* Indent list */
+  list-style-position: outside;
+}
+.home-section-full li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+.home-section img {
+  max-width: 80%; /* Control image size within section */
   height: auto;
-  margin-top: 10px;
+  margin: 15px auto 0 auto; /* Center image and add top margin */
+}
+
+/* Styles for full-width sections */
+.home-section-full {
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  /* The .bordered-section class from global.css adds border and padding */
+  margin-bottom: 25px; /* Space below */
+}
+
+.home-section-full h2 {
+   margin-top: 0;
+}
+
+/* Featured Cards Section */
+.featured-cards-section {
+  margin-top: 30px;
+}
+
+.featured-cards-section h2 {
+   margin-bottom: 20px; /* Space below title */
+}
+
+.featured-cards-container {
+  display: flex;
+  justify-content: space-around; /* Distribute cards evenly */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 15px; /* Space between cards */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .home-sections-row {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 25px; /* Adjust gap for vertical layout */
+  }
+  .home-section {
+    width: 100%; /* Make sections full width */
+    box-sizing: border-box;
+  }
+  .featured-cards-container {
+      justify-content: center; /* Center cards if they wrap */
+  }
 }

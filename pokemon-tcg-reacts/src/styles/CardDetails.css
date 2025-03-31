@@ -1,22 +1,65 @@
 .card-details {
-    padding: 20px;
-  }
-  
-  .card-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .card-section img {
-    max-width: 40%;
-    height: auto;
-  }
-  
-  .details {
-    width: 50%;
-  }
-  
-  .detail {
-    margin-bottom: 10px;
-  }
+  padding: 20px;
+  max-width: 900px; /* Constrain width */
+  margin: 0 auto; /* Center */
+}
+
+.details-subtitle {
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: #555;
+    /* font-style: italic; */ /* Removed italics based on screenshot */
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-between; /* Space between image and details */
+  align-items: flex-start; /* Align to top */
+  gap: 30px; /* Space between image and text */
+}
+
+.card-image-large { /* Target the image */
+  flex-basis: 40%; /* Takes up 40% of the space */
+  max-width: 300px; /* Max width for the image */
+  height: auto;
+  border: 1px solid #ddd; /* Optional subtle border */
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.15); /* Add shadow */
+}
+
+.details-list { /* The container for the text details */
+  flex-basis: 55%; /* Takes up slightly more space */
+}
+
+.detail-item { /* Style each detail paragraph */
+  margin-bottom: 12px; /* Space between details */
+  line-height: 1.5; /* Adjust line spacing */
+  font-size: 1em;
+  padding-bottom: 10px; /* Add space below */
+  border-bottom: 1px solid #eee; /* Separator line */
+}
+.detail-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.detail-item b { /* Style the bolded part */
+  color: #cc0000; /* Make the term red or darker */
+  margin-right: 5px; /* Space after bold term */
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .card-section {
+        flex-direction: column; /* Stack image and details */
+        align-items: center; /* Center items */
+    }
+    .card-image-large {
+        flex-basis: auto; /* Reset basis */
+        max-width: 70%; /* Allow image to be wider */
+        margin-bottom: 20px; /* Space below image */
+    }
+    .details-list {
+        flex-basis: auto; /* Reset basis */
+        width: 100%; /* Take full width */
+    }
+}
