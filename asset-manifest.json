@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokemon-tcg-reacts/static/css/main.04f71cec.css",
+    "main.js": "/pokemon-tcg-reacts/static/js/main.39cbb5b6.js",
+    "index.html": "/pokemon-tcg-reacts/index.html",
+    "main.04f71cec.css.map": "/pokemon-tcg-reacts/static/css/main.04f71cec.css.map",
+    "main.39cbb5b6.js.map": "/pokemon-tcg-reacts/static/js/main.39cbb5b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04f71cec.css",
+    "static/js/main.39cbb5b6.js"
+  ]
+}
