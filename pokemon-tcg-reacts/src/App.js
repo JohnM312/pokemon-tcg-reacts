@@ -6,7 +6,6 @@ import Rules from './pages/Rules.jsx';
 import SampleDecks from './pages/SampleDecks.jsx';
 import Catalog from './pages/Catalog.jsx';
 import CardDetails from './pages/CardDetails.jsx';
-import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
 import './App.css';
@@ -24,7 +23,6 @@ function App() {
             <Route path="/sampledecks" element={<SampleDecks />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/carddetails" element={<CardDetails />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />

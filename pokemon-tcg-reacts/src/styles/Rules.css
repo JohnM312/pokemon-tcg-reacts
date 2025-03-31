@@ -1,0 +1,25 @@
+/* src/pages/Rules.css */
+.rules {
+    padding: 20px;
+  }
+  
+  .game-setup, .turn-structure, .winning-the-game {
+    margin-bottom: 20px;
+  }
+  
+  .turn-structure {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .phase {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .game-setup img {
+    max-width: 50%;
+    height: auto;
+  }
