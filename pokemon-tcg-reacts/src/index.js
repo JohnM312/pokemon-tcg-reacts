@@ -7,11 +7,10 @@ import Rules from './pages/Rules.jsx';
 import SampleDecks from './pages/SampleDecks.jsx';
 import Catalog from './pages/Catalog.jsx';
 import CardDetails from './pages/CardDetails.jsx';
-import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || '/'}> 
+    <BrowserRouter basename={process.env.PUBLIC_URL}> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rules" element={<Rules />} />
@@ -19,7 +18,6 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/carddetails/:cardId" element={<CardDetails />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
