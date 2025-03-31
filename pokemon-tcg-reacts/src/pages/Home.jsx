@@ -6,7 +6,6 @@ function Home() {
   return (
     <div className="home">
       <h1>Welcome to the World of Pokémon TCG!</h1>
-      {/* Add your content here based on the image you provided */}
       <p>The Pokémon Trading Card Game (TCG) is a collectible card game based on the Pokémon franchise. Players build decks of Pokémon, Trainer, and Energy cards to battle each other, using strategy to outplay their opponents.</p>
       <div className="sections">
         <div className="section">

@@ -41,6 +41,7 @@ function Catalog() {
           <option value="GX">GX</option>
           <option value="V">V</option>
           <option value="VSTAR">VSTAR</option>
+          
           <option value="Trainer">Select Trainer - Item</option>
             <option value="Item">Item</option>
             <option value="Supporter">Supporter</option>
