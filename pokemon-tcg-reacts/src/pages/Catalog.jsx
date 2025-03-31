@@ -34,8 +34,17 @@ function Catalog() {
         <select id="card-types">
           <option value="">Select Pokémon Type</option>
           <option value="Pokemon">Pokemon</option>
-          <option value="Trainer">Trainer</option>
-          <option value="Energy">Energy</option>
+          <option value="Basic">Basic</option>
+          <option value="Stage 1">Stage 1</option>
+          <option value="Stage 2">Stage 2</option>
+          <option value="EX">EX</option>
+          <option value="GX">GX</option>
+          <option value="V">V</option>
+          <option value="VSTAR">VSTAR</option>
+          <option value="Trainer">Select Trainer - Item</option>
+            <option value="Item">Item</option>
+            <option value="Supporter">Supporter</option>
+            <option value="Stadium">Stadium</option>
         </select>
 
         <button>Search</button>
