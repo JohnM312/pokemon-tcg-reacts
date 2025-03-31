@@ -1,0 +1,23 @@
+/* src/pages/CardDetails.css */
+.card-details {
+    padding: 20px;
+  }
+  
+  .card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .card-section img {
+    max-width: 40%;
+    height: auto;
+  }
+  
+  .details {
+    width: 50%;
+  }
+  
+  .detail {
+    margin-bottom: 10px;
+  }

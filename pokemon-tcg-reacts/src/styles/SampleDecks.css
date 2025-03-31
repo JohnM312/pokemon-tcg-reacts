@@ -1,0 +1,24 @@
+/* src/pages/SampleDecks.css */
+.sample-decks {
+    padding: 20px;
+  }
+  
+  .deck-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .deck {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .deck img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }

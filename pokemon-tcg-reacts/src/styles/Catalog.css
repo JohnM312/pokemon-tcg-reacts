@@ -1,0 +1,34 @@
+/* src/pages/Catalog.css */
+.catalog {
+    padding: 20px;
+  }
+  
+  .search-form {
+    margin-bottom: 20px;
+  }
+  
+  .search-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .search-form input, .search-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
