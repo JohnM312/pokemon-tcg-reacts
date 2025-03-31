@@ -11,7 +11,7 @@ import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/rules" element={<Rules />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path="/carddetails" element={<CardDetails />} />
           </Routes>
         <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
