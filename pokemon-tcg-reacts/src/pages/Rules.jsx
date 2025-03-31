@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Rules.css';  // Corrected path
+import '../styles/Rules.css'; 
 
 function Rules() {
   return (

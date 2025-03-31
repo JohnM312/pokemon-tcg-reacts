@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SampleDecks.css'; // Corrected path
+import '../styles/SampleDecks.css';
 
 function SampleDecks() {
   return (

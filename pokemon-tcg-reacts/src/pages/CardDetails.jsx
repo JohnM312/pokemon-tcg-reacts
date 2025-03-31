@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CardDetails.css';  // Corrected path
+import '../styles/CardDetails.css';  
 
 function CardDetails() {
   return (

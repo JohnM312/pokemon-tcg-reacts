@@ -1,6 +1,5 @@
-// src/pages/Home.jsx
 import React from 'react';
-import '../styles/Home.css'; // Corrected path
+import '../styles/Home.css'; 
 
 function Home() {
   return (

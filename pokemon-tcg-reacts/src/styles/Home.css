@@ -1,25 +1,20 @@
-/* src/pages/Rules.css */
-.rules {
-    padding: 20px;
-  }
-  
-  .game-setup, .turn-structure, .winning-the-game {
-    margin-bottom: 20px;
-  }
-  
-  .turn-structure {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .phase {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .game-setup img {
-    max-width: 50%;
-    height: auto;
-  }
+.home {
+  padding: 20px;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.section {
+  width: 45%;
+  text-align: center;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}

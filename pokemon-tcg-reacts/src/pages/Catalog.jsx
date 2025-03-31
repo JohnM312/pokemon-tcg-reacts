@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
-import '../styles/Catalog.css'; // Corrected path
+import '../styles/Catalog.css'; 
 import cardData from '../data/pokemon.json'; // Changed path to correct json file
 
 function Catalog() {
@@ -41,7 +41,7 @@ function Catalog() {
           <option value="GX">GX</option>
           <option value="V">V</option>
           <option value="VSTAR">VSTAR</option>
-          
+
           <option value="Trainer">Select Trainer - Item</option>
             <option value="Item">Item</option>
             <option value="Supporter">Supporter</option>
