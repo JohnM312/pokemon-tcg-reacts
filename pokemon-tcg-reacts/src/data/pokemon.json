@@ -14,7 +14,7 @@
         "name": "Charizard",
         "img_name": "images/Charizard EX.png",
         "type": "Fire",
-        "hp": 120,
+        "hp": 180,
         "abilities": ["Slash (60)", "Crimson Storm (200)"],
         "rarity": "EX",
         "set": "Base Set"
@@ -24,7 +24,7 @@
         "name": "Blastoise",
         "img_name": "images/Blastoise EX.png",
         "type": "Water",
-        "hp": 100,
+        "hp": 180,
         "abilities": ["Surf (40)", "Hydro Bazooka (100+)"],
         "rarity": "EX",
         "set": "Base Set"
@@ -34,7 +34,7 @@
         "name": "Venusaur",
         "img_name": "images/Venasaur EX.png",
         "type": "Grass",
-        "hp": 110,
+        "hp": 190,
         "abilities": ["Giant Bloom (100)", "Razor Leaf (60)"],
         "rarity": "EX",
         "set": "Base Set"
@@ -44,7 +44,7 @@
         "name": "Gengar",
         "img_name": "images/Gengar Uncommon.png",
         "type": "Ghost",
-        "hp": 90,
+        "hp": 110,
         "abilities": ["Hypnoblast (90)"],
         "rarity": "Uncommon",
         "set": "Haunted Shadows"
@@ -54,7 +54,7 @@
         "name": "Mewtwo",
         "img_name": "images/Mewtwo EX.png",
         "type": "Psychic",
-        "hp": 130,
+        "hp": 150,
         "abilities": ["Psychic Sphere (50)", "Psydrive (120)"],
         "rarity": "EX",
         "set": "Psychic Masters"
@@ -64,7 +64,7 @@
         "name": "Lucario",
         "img_name": "images/Lucario Uncommon.png",
         "type": "Fighting",
-        "hp": 100,
+        "hp": 130,
         "abilities": ["Avenging Knuckle (30+)", "Accelerating Stab (120)"],
         "rarity": "Uncommon",
         "set": "Battle Warriors"
@@ -74,7 +74,7 @@
         "name": "Rayquaza",
         "img_name": "images/Rayquaza EX.jpg",
         "type": "Dragon",
-        "hp": 140,
+        "hp": 170,
         "abilities": ["Intensifying Burn (10+)", "Dragon Pulse (100)"],
         "rarity": "EX",
         "set": "Sky Legends"

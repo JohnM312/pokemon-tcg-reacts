@@ -69,8 +69,8 @@ function Catalog() {
 
         <div className="featured-card-display bordered-section"> {/* Featured Card Area */}
             {/* Update image path if needed */}
-           <img src="/images/Zapdos.png" alt="Featured Card - Zapdos" />
-        </div>
+            <img src={process.env.PUBLIC_URL + "/images/Zapdos EX.jpg"} alt="Zapdos EX" />
+            </div>
       </div>
 
       {/* Card Results Grid */}
@@ -78,9 +78,15 @@ function Catalog() {
         {filteredCards.map(card => (
           <Card
             key={card._id}
-            image={`/${card.img_name}`} // Adjusted path
+            image={process.env.PUBLIC_URL + "/" + card.img_name} // Adjusted path
             title={card.name}
-            description={`Type: ${card.type}, HP: ${card.hp}`}
+            description={`
+              Type: ${card.type},
+              HP: ${card.hp},
+              Abilities: ${card.abilities ? card.abilities.join(', ') : 'N/A'},
+              Rarity: ${card.rarity},
+              Set: ${card.set}
+            `}
           />
         ))}
       </div>

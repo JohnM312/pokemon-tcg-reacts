@@ -18,7 +18,8 @@ function Rules() {
             <li>Set aside "6 Prize cards".</li>
             <li>Flip a coin to decide who goes first.</li>
           </ul>
-          <img src="/images/TCGDiagram.png" alt="Game Setup Diagram" />
+          <img src={process.env.PUBLIC_URL + "/images/TCGDiagram.png"} alt="PokemonTCG Diagram?" />
+
         </div>
       </div>
 

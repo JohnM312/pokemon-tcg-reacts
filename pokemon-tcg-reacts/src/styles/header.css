@@ -8,12 +8,15 @@ header {
   position: relative; /* Needed for absolute positioning of menu if required */
 }
 
-.logo { /* Class for the img tag in Header.jsx */
+.logo {
+  /* Class for the img tag in Header.jsx */
   height: 50px; /* Adjust logo size */
   width: auto;
+  display: block; /* Ensure it behaves as a block-level element */
 }
 
-.nav-links { /* Class for the ul tag */
+.nav-links {
+  /* Class for the ul tag */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -21,7 +24,8 @@ header {
   gap: 15px; /* Space between nav items */
 }
 
-.nav-links li a { /* Target the Link component */
+.nav-links li a {
+  /* Target the Link component */
   color: white;
   text-decoration: none;
   padding: 10px 15px;
@@ -33,7 +37,8 @@ header {
 }
 
 .nav-links li a:hover,
-.nav-links li a.active { /* Add .active class via NavLink if using it, else just hover */
+.nav-links li a.active {
+  /* Add .active class via NavLink if using it, else just hover */
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -59,44 +64,45 @@ header {
 }
 
 /* Media Query for Mobile Nav */
-@media (max-width: 768px) { /* Breakpoint where nav collapses */
+@media (max-width: 768px) {
+  /* Breakpoint where nav collapses */
   .nav-links {
-      display: none; /* Hide nav links */
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-      top: 60px; /* Position below header (adjust based on header height) */
-      left: 0;
-      background-color: #ff0000; /* Same red background */
-      padding: 10px 0;
-      z-index: 10; /* Ensure it's above other content */
+    display: none; /* Hide nav links */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Position below header (adjust based on header height) */
+    left: 0;
+    background-color: #ff0000; /* Same red background */
+    padding: 10px 0;
+    z-index: 10; /* Ensure it's above other content */
   }
 
   .menu-checkbox:checked ~ nav .nav-links {
-      display: flex; /* Show nav links when checkbox is checked */
-      align-items: center;
+    display: flex; /* Show nav links when checkbox is checked */
+    align-items: center;
   }
 
   .nav-links li {
-       width: 100%;
-       text-align: center;
+    width: 100%;
+    text-align: center;
   }
-   .nav-links li a {
-       padding: 15px 0; /* Adjust padding for vertical layout */
-   }
+  .nav-links li a {
+    padding: 15px 0; /* Adjust padding for vertical layout */
+  }
 
   .hamburger {
-      display: block; /* Show hamburger on small screens */
+    display: block; /* Show hamburger on small screens */
   }
 
   /* Optional: Animate hamburger bars */
-   .menu-checkbox:checked ~ .hamburger .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-   }
-   .menu-checkbox:checked ~ .hamburger .bar:nth-child(2) {
-      opacity: 0;
-   }
-   .menu-checkbox:checked ~ .hamburger .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-   }
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

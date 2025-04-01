@@ -9,8 +9,8 @@ function CardDetails() {
       <p className="details-subtitle">- This will provide descriptions on how the card works.</p>
 
       <div className="card-section">
-        <img src="/images/Charizard EX.png" alt="Charizard EX" className="card-image-large" />
-        <div className="details-list"> 
+      <img src={process.env.PUBLIC_URL + "/images/Charizard EX.png"} alt="Charizard Ex" />
+      <div className="details-list"> 
           <p className="detail-item">
             <b>Stage</b> - Displays the evolution level of the Pokémon.
           </p>
