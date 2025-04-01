@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Pokémon TCG</p>
+      <p>© {new Date().getFullYear()} Pokémon TCG - John Mai</p>
     </footer>
   );
 }

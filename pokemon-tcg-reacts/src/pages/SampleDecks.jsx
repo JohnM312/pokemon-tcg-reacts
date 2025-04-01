@@ -10,7 +10,7 @@ function SampleDecks() {
       <div className="deck-container">
         <div className="deck bordered-section">
           <h2>Fire Blast Deck</h2>
-          <img src="/images/Fire Blast Deck.png" alt="Fire Blast Deck" />
+          <img src="/images/charizard deck.jpg" alt="Fire Blast Deck" />
           <p>A strong "*Fire-type*" deck featuring Charizard for high-damage attacks.</p>
           <ul>
             <li>Strong against "*Grass & Ice types*".</li>
@@ -20,7 +20,7 @@ function SampleDecks() {
 
         <div className="deck bordered-section">
           <h2>Water Surge Deck</h2>
-          <img src="/images/Water Surge Deck.png" alt="Water Surge Deck" />
+          <img src="/images/blastoise deck.png" alt="Water Surge Deck" />
           <p>A "*Water-type*" deck built around Blastoise's powerful Hydro Pump.</p>
           <ul>
             <li>Good against "*Fire & Rock types*".</li>
@@ -30,7 +30,7 @@ function SampleDecks() {
 
         <div className="deck bordered-section">
           <h2>Electric Speed Deck</h2>
-          <img src="/images/Pikachu V.jpg" alt="Electric Speed Deck" />
+          <img src="/images/pikachu deck.png" alt="Electric Speed Deck" />
           <p>An "*Electric-type*" deck featuring Pikachu and Raichu for quick attacks.</p>
           <ul>
             <li>Great for fast-paced battles.</li>
