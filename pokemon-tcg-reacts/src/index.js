@@ -9,6 +9,8 @@ import Rules from './pages/Rules.jsx';
 import SampleDecks from './pages/SampleDecks.jsx';
 import Catalog from './pages/Catalog.jsx';
 import CardDetails from './pages/CardDetails.jsx';
+import Contact from './pages/Contact.jsx';
+
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           {/* Ensure CardDetails route path matches links if needed */}
           <Route path="/carddetails" element={<CardDetails />} />
-          <Route path="/carddetails/:cardId" element={<CardDetails />} /> */
+          <Route path="/carddetails/:cardId" element={<CardDetails />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

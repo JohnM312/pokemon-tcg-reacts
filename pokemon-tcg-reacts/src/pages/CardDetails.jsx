@@ -1,4 +1,3 @@
-// Updated CardDetails.jsx
 import React from 'react';
 import '../styles/CardDetails.css';
 
@@ -9,7 +8,7 @@ function CardDetails() {
       <p className="details-subtitle">- This will provide descriptions on how the card works.</p>
 
       <div className="card-section">
-      <img src={process.env.PUBLIC_URL + "/images/Charizard EX.png"} alt="Charizard Ex" />
+      <img src={process.env.PUBLIC_URL + "/images/Charizard EX.png"} alt="Charizard EX" />
       <div className="details-list"> 
           <p className="detail-item">
             <b>Stage</b> - Displays the evolution level of the Pokémon.

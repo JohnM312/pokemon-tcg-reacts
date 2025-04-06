@@ -1,5 +1,5 @@
-// Updated Catalog.jsx
 import React, { useState, useEffect } from 'react';
+//import axios from "axios"
 import Card from '../components/Card';
 import '../styles/Catalog.css';
 import cardData from '../data/pokemon.json';
@@ -12,6 +12,8 @@ function Catalog() {
     // Simulate fetching data - replace with actual fetch if needed
     setCards(cardData);
     setFilteredCards(cardData); // Initially show all cards
+    //(async () ={}
+    //  const response = await axios.get("http://localhost:3001/api/pokemon")
   }, []);
 
   // Add search/filter logic here later if needed

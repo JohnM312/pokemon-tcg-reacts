@@ -1,5 +1,5 @@
 .card {
-  border: 2px solid red; 
+  border: 2px solid red;
   padding: 15px;
   margin: 10px;
   width: 220px; /* Adjust width as needed */
@@ -33,5 +33,5 @@
   font-size: 0.9em;
   color: #555;
   text-align: center;
-  margin-bottom: 0; /* Remove bottom margin if not needed */
+  margin-bottom: 5px; /* Add bottom margin for spacing between lines */
 }
