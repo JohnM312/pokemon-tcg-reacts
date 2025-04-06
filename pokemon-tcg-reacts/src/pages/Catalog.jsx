@@ -14,7 +14,7 @@ function Catalog() {
         setLoading(true); //Set to Loading
 
         try {
-          const response = await axios.get('https://pokemon-tcg-node.onrender.com');
+          const response = await axios.get('https://pokemon-tcg-node.onrender.com/api/pokemon');
 
           //if (!response.ok) {
             //throw new Error(`HTTP error! status: ${response.status}`);
