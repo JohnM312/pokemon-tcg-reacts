@@ -1,22 +1,41 @@
 import React, { useState, useEffect } from 'react';
-//import axios from "axios"
+import axios from "axios";
 import Card from '../components/Card';
 import '../styles/Catalog.css';
-import cardData from '../data/pokemon.json';
 
 function Catalog() {
   const [cards, setCards] = useState([]);
   const [filteredCards, setFilteredCards] = useState([]); // State for filtered results
+  const [loading, setLoading] = useState(true); //Loading Screen
+  const [error, setError] = useState(null); //Set to Error If There Is
 
   useEffect(() => {
-    // Simulate fetching data - replace with actual fetch if needed
-    setCards(cardData);
-    setFilteredCards(cardData); // Initially show all cards
-    //(async () ={}
-    //  const response = await axios.get("http://localhost:3001/api/pokemon")
+    const fetchData = async () => {
+        setLoading(true); //Set to Loading
+
+        try {
+          const response = await axios.get('https://pokemon-tcg-node.onrender.com');
+
+          //if (!response.ok) {
+            //throw new Error(`HTTP error! status: ${response.status}`);
+          //}
+          const data = response.data;
+          setCards(data);
+          setFilteredCards(data); // Initially show all cards
+        } catch (error) {
+          console.error("There was a problem fetching the data:", error);
+          setError(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+    fetchData();
   }, []);
 
   // Add search/filter logic here later if needed
+
+  if (loading) return <p>Loading Houses...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="catalog">
