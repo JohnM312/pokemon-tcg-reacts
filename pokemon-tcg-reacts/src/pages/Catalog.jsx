@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Card from '../components/Card';
+import AddingForm from '../components/AddingForm'; // Import the AddingForm component
 import '../styles/Catalog.css';
 
 function Catalog() {
@@ -11,48 +12,48 @@ function Catalog() {
 
   useEffect(() => {
     const fetchData = async () => {
-        setLoading(true); //Set to Loading
+      setLoading(true);
 
-        try {
-          const response = await axios.get('https://pokemon-tcg-node.onrender.com/api/pokemon');
-
-          //if (!response.ok) {
-            //throw new Error(`HTTP error! status: ${response.status}`);
-          //}
-          const data = response.data;
-          setCards(data);
-          setFilteredCards(data); // Initially show all cards
-        } catch (error) {
-          console.error("There was a problem fetching the data:", error);
-          setError(error);
-        } finally {
-          setLoading(false);
-        }
-      };
+      try {
+        const response = await axios.get('http://localhost:3001/api/pokemon');
+        const data = response.data;
+        setCards(data);
+        setFilteredCards(data); // Initially show all cards
+      } catch (error) {
+        console.error("There was a problem fetching the data:", error);
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchData();
   }, []);
 
-  // Add search/filter logic here later if needed
+  const handleCardAdded = (newCard) => {
+    setCards([...cards, newCard]); // Update the state
+    setFilteredCards([...filteredCards, newCard]); // Also update the filtered cards (if no search)
+  }
 
-  if (loading) return <p>Loading Houses...</p>;
-    if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading Pokemon TCG Database...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="catalog">
       <h1>Catalog</h1>
       <p className="catalog-subtitle">Trading Card Database:</p>
 
-      {/* Top section: Search Form & Featured Card */}
+      {/* Top section:  AddingForm and Search Form */}
       <div className="catalog-top-section">
-        <div className="search-form-container"> {/* Wrapper for form */}
-          <form className="search-form"> {/* Use form tag */}
+        <AddingForm onCardAdded={handleCardAdded} />
+
+        <div className="search-form-container">
+          <form className="search-form">
             <label htmlFor="card-name">Card Name:</label>
             <input type="text" id="card-name" placeholder="Please enter" />
 
             <label htmlFor="energy-types">Energy Types:</label>
             <select id="energy-types">
               <option value="">Energy Types Menu</option>
-              {/* Add options dynamically if possible */}
               <option value="">Energy Types Menu</option>
               <option value="Electric">Electric</option>
               <option value="Fire">Fire</option>
@@ -84,14 +85,9 @@ function Catalog() {
                <option value="Stadium">Stadium</option>
             </select> 
 
-            <button type="submit">Search</button> {/* Use type="submit" */}
+            <button type="submit">Search</button>
           </form>
         </div>
-
-        <div className="featured-card-display bordered-section"> {/* Featured Card Area */}
-            {/* Update image path if needed */}
-            <img src={process.env.PUBLIC_URL + "/images/Zapdos EX.jpg"} alt="Zapdos EX" />
-            </div>
       </div>
 
       {/* Card Results Grid */}
@@ -99,7 +95,7 @@ function Catalog() {
         {filteredCards.map(card => (
           <Card
             key={card._id}
-            image={process.env.PUBLIC_URL + "/" + card.img_name} // Adjusted path
+            image={process.env.PUBLIC_URL + "/" + card.img_name}
             title={card.name}
             description={`
               Type: ${card.type},
