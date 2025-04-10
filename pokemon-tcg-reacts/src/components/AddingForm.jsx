@@ -28,7 +28,7 @@ function AddingForm({ onCardAdded }) {
     formData.append('set', set);
 
     try {
-      const response = await axios.post("http://localhost:3001/api/pokemon", formData, {
+      const response = await axios.post("https://pokemon-tcg-node.onrender.com/api/pokemon", formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Important for file uploads
         }
