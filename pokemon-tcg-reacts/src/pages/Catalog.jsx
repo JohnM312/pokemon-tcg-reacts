@@ -15,7 +15,7 @@ function Catalog() {
       setLoading(true);
 
       try {
-        const response = await axios.get('https://pokemon-tcg-node.onrender.com/api/pokemon');
+        const response = await axios.get('https://pokemon-tcg-node.onrender.com/');
         const data = response.data;
         setCards(data);
         setFilteredCards(data); // Initially show all cards
@@ -95,7 +95,7 @@ function Catalog() {
         {filteredCards.map(card => (
           <Card
             key={card._id}
-            image={"https://pokemon-tcg-node.onrender.com/api/pokemon" + card.img_name}
+            image={"https://pokemon-tcg-node.onrender.com/" + card.img_name}
             title={card.name}
             description={`
               Type: ${card.type},
