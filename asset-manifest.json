@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pokemon-tcg-reacts/static/css/main.0316bd0c.css",
-    "main.js": "/pokemon-tcg-reacts/static/js/main.3da911da.js",
+    "main.css": "/pokemon-tcg-reacts/static/css/main.8c0cf5c4.css",
+    "main.js": "/pokemon-tcg-reacts/static/js/main.9de66727.js",
     "index.html": "/pokemon-tcg-reacts/index.html",
-    "main.0316bd0c.css.map": "/pokemon-tcg-reacts/static/css/main.0316bd0c.css.map",
-    "main.3da911da.js.map": "/pokemon-tcg-reacts/static/js/main.3da911da.js.map"
+    "main.8c0cf5c4.css.map": "/pokemon-tcg-reacts/static/css/main.8c0cf5c4.css.map",
+    "main.9de66727.js.map": "/pokemon-tcg-reacts/static/js/main.9de66727.js.map"
   },
   "entrypoints": [
-    "static/css/main.0316bd0c.css",
-    "static/js/main.3da911da.js"
+    "static/css/main.8c0cf5c4.css",
+    "static/js/main.9de66727.js"
   ]
 }
