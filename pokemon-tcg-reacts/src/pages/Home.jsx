@@ -41,7 +41,7 @@ function Home() {
       </div>
 
       {/* Fun Facts Section - Full Width */}
-      <div className="home-section-full bordered-section"> {/* Added class */}
+      <div className="home-section-full bordered-section">
          <h2>Fun Facts about Pokémon TCG</h2>
          <ul>
             <li>The most expensive Pokémon card ever sold is a Pikachu Illustrator card, auctioned for over $5 million!</li>

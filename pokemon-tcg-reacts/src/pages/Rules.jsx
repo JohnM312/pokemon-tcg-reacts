@@ -1,4 +1,3 @@
-// Updated Rules.jsx
 import React from 'react';
 import '../styles/Rules.css';
 
@@ -8,7 +7,7 @@ function Rules() {
       <h1>Rules and Setup</h1>
 
       {/* Game Setup Section */}
-      <div className="game-setup bordered-section"> {/* Added class */}
+      <div className="game-setup bordered-section"> 
         <h2>Game Setup</h2>
         <div className="game-setup-content"> {/* Added wrapper for flex */}
           <ul>

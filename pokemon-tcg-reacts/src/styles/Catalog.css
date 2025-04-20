@@ -6,25 +6,25 @@
 }
 
 .catalog-subtitle {
-    text-align: center;
-    margin-top: -15px; /* Pull subtitle closer to title */
-    margin-bottom: 25px;
-    color: #555;
-    font-style: italic;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 25px;
+  color: #555;
+  font-style: italic;
 }
 
 /* Top Section Layout (Form & Featured Card) */
 .catalog-top-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
-    gap: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .search-form-container {
-    flex: 1; /* Allow form container to grow */
-    max-width: 400px; /* Limit form width */
+  flex: 1;
+  max-width: 400px;
 }
 
 .search-form {
@@ -41,70 +41,136 @@
 .search-form input,
 .search-form select {
   width: 100%;
-  padding: 10px; /* Increased padding */
-  margin-bottom: 15px; /* Increased margin */
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  box-sizing: border-box; /* Include padding in width */
+  box-sizing: border-box;
   border-radius: 4px;
 }
 
 .search-form button {
-  padding: 12px 25px; /* Make button larger */
-  background-color: #FFDE00; /* Yellow color */
-  color: #3B4CCA; /* Blue text color */
-  border: 2px solid #3B4CCA; /* Blue border */
+  padding: 12px 25px;
+  background-color: #FFDE00;
+  color: #3B4CCA;
+  border: 2px solid #3B4CCA;
   cursor: pointer;
   font-weight: bold;
   font-size: 1em;
   border-radius: 5px;
   transition: background-color 0.2s ease, color 0.2s ease;
-  width: 100%; /* Make button full width of container */
+  width: 100%;
 }
 
 .search-form button:hover {
-  background-color: #e6c600; /* Darker yellow on hover */
+  background-color: #e6c600;
   color: #2a37a1;
 }
 
 /* Featured Card Display */
 .featured-card-display {
-    flex-basis: 250px; /* Set a base width */
-    flex-shrink: 0; /* Prevent shrinking */
-    /* .bordered-section adds border and padding */
-    padding: 10px; /* Adjust padding if needed */
+  flex-basis: 250px;
+  flex-shrink: 0;
+  padding: 10px;
 }
 
 .featured-card-display img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
-
 
 /* Card Grid */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center cards */
-  gap: 15px; /* Space between cards */
-  margin-top: 20px; /* Space above the grid */
-  padding-top: 20px; /* Add padding above */
-  border-top: 1px solid #eee; /* Optional separator line */
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Edit Form Styles */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 10px; /* Add some space above the form */
+}
+
+.edit-form label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333; /* Darker label color for better readability */
+}
+
+.edit-form input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.edit-form button {
+  padding: 10px 15px;
+  background-color: #4CAF50; /* Green update button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px; /* Adjust spacing */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.edit-form button:hover {
+  background-color: #367c39; /* Darker green on hover */
+}
+
+/* Edit Actions (Edit/Delete Buttons) */
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px; /* Add some space */
+}
+
+.edit-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #007bff; /* Blue edit button */
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.edit-actions button:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .catalog-top-section {
-        flex-direction: column; /* Stack form and featured card */
-        align-items: center; /* Center items */
-    }
-    .search-form-container {
-        max-width: 90%; /* Allow form to be wider */
-        margin-bottom: 20px; /* Space below form */
-    }
-    .featured-card-display {
-        flex-basis: auto; /* Reset basis */
-        width: 60%; /* Control width */
-        max-width: 250px;
-    }
+  .catalog-top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form-container {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .featured-card-display {
+    flex-basis: auto;
+    width: 60%;
+    max-width: 250px;
+  }
 }
