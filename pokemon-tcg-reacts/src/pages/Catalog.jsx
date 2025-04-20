@@ -126,13 +126,47 @@ function Catalog() {
         <div className="catalog">
             <h1>Catalog</h1>
             <p className="catalog-subtitle">Trading Card Database:</p>
-            <div className="catalog-top-section">
+                <div className="catalog-top-section">
                 <AddingForm onCardAdded={handleCardAdded} />
-                <div className="search-form-container">
-                    <form className="search-form">
+                    <div className="search-form-container">
+                        <form className="search-form">
                         <label htmlFor="card-name">Card Name:</label>
                         <input type="text" id="card-name" placeholder="Please enter" />
-                        {/* ... other search form elements */}
+                        <label htmlFor="energy-types">Energy Types:</label>
+                            <select id="energy-types">
+                                <option value="">Energy Types Menu</option>
+                                <option value="">Energy Types Menu</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Fire">Fire</option>
+                                <option value="Water">Water</option>
+                                <option value="Grass">Grass</option>
+                                <option value="Ghost">Ghost</option>
+                                <option value="Psychic">Psychic</option>
+                                <option value="Fighting">Fighting</option>
+                                <option value="Dragon">Dragon</option>
+                            </select>
+
+                        <label htmlFor="card-types">Card Types:</label>
+                            <select id="card-types">
+                                <option value="Pokemon">Pokemon</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Stage 1">Stage 1</option>
+                                <option value="Stage 2">Stage 2</option>
+                                <option value="EX">EX</option>
+                                <option value="GX">GX</option>
+                                <option value="V">V</option>
+                                <option value="VSTAR">VSTAR</option>
+                            </select>
+        
+                        <label htmlFor="trainer-types">Trainer Types:</label>
+                            <select id="trainer-types">
+                                <option value="">Select Trainer - Item</option>
+                                <option value="Item">Item</option>
+                                <option value="Supporter">Supporter</option>
+                                <option value="Stadium">Stadium</option>
+                            </select> 
+
+                        <button type="submit">Search</button>
                     </form>
                 </div>
             </div>
