@@ -24,7 +24,7 @@ function Catalog() {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await axios.get('http://localhost:3001/api/pokemon');
+                const response = await axios.get('https://pokemon-tcg-node.onrender.com/api/pokemon');
                 console.log("API Response:", response);
                 console.log("API Response Data:", response.data);
 
@@ -71,7 +71,7 @@ function Catalog() {
 
     const handleEditFormSubmit = async (cardId) => {
         try {
-            const response = await axios.put(`http://localhost:3001/api/pokemon${cardId}`, {
+            const response = await axios.put(`https://pokemon-tcg-node.onrender.com/api/pokemon${cardId}`, {
                 ...editFormData,
                 abilities: editFormData.abilities.split(',')
             });
@@ -100,7 +100,7 @@ function Catalog() {
 
     const handleDeleteClick = async (cardId) => {
         try {
-            const response = await axios.delete(`http://localhost:3001/api/pokemon${cardId}`);
+            const response = await axios.delete(`https://pokemon-tcg-node.onrender.com/api/pokemon${cardId}`);
             console.log("handleDeleteClick data", response);
             if (response.status === 200) {
                 setMessage('Card deleted successfully!');
@@ -144,7 +144,7 @@ function Catalog() {
                    return(
                     <div key={card._id} className="card-container">
                         <Card
-                            image={`http://localhost:3001/api/pokemon${card.img_name}`}
+                            image={`https://pokemon-tcg-node.onrender.com/api/pokemon${card.img_name}`}
                             title={card.name}
                             description={`
                                 Type: ${card.type},
